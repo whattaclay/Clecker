@@ -17,6 +17,7 @@ namespace DefaultNamespace
         [SerializeField]private ProgressBar progressBar;
         private float _progressPercentPerUpgrade = 25;
         [SerializeField] private TextMeshProUGUI _currentProfit;
+        [SerializeField] private BalanceConfig _balanceConfig;
 
         private void Start()
         {
@@ -28,12 +29,14 @@ namespace DefaultNamespace
 
         public void FirstUpgradeButtonState()
         {
-            if (_businessText.text!= _businessConfig.Values.SecondUpgrdName)
+            if (!(_balanceConfig.Balance.BalanceValue >= _businessConfig.Values.FirstUpgrdPrice)) return;
+            _balanceConfig.Balance.BalanceValue -= _businessConfig.Values.FirstUpgrdPrice;
+            if (_businessText.text != _businessConfig.Values.SecondUpgrdName)
             {
                 _businessText.text = _businessConfig.Values.FirstUpgrdName + ":";
-                _businessConfig.Values.BusinessName = _businessConfig.Values.FirstUpgrdName + ":";
+                _businessConfig.Values.BusinessName = _businessConfig.Values.FirstUpgrdName;
             }
-            _businessConfig.Values.ProfitValue *= 1+(_businessConfig.Values.FirstUpgradePricePercentage/ 100);
+            _businessConfig.Values.ProfitValue *= 1 + (_businessConfig.Values.FirstUpgradePercentage / 100);
             _currentProfit.text = "Profit: " + _businessConfig.Values.ProfitValue.ToString("0.00") + "$";
             _firstButtonText.text = "Upgrade is Sold";
             _firstUpgradeButton.interactable = false;
@@ -42,10 +45,12 @@ namespace DefaultNamespace
         }
         public void SecondUpgradeButtonState()
         {
-            if (_firstUpgradeButton.interactable)return;
+            if (!(_balanceConfig.Balance.BalanceValue >= _businessConfig.Values.SecondUpgrdPrice)) return;
+            _balanceConfig.Balance.BalanceValue -= _businessConfig.Values.SecondUpgrdPrice;
+            if (_firstUpgradeButton.interactable) return;
             _businessText.text = _businessConfig.Values.SecondUpgrdName + ":";
-            _businessConfig.Values.BusinessName = _businessConfig.Values.SecondUpgrdName + ":";
-            _businessConfig.Values.ProfitValue *= 1+(_businessConfig.Values.SecondUpgradePricePercentage/ 100);
+            _businessConfig.Values.BusinessName = _businessConfig.Values.SecondUpgrdName;
+            _businessConfig.Values.ProfitValue *= 1 + (_businessConfig.Values.SecondUpgradePercentage / 100);
             _currentProfit.text = "Profit: " + _businessConfig.Values.ProfitValue.ToString("0.00") + "$";
             _secondButtonText.text = "Upgrade is Sold";
             _secondUpgradeButton.interactable = false;

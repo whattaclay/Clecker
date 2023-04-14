@@ -21,14 +21,17 @@ public class BusinessWindowManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _firstUpgradeText;
     [SerializeField] private TextMeshProUGUI _secondUpgradeText;
     [SerializeField] private TextMeshProUGUI _profitTimeText;
-    [SerializeField] private TextMeshProUGUI _balance;
     [SerializeField] private Image _fillBar;
+    [SerializeField] private Image _disabledBusiness;
     private float _profitTimeVariable;
     [SerializeField] private BusinessConfig _businessConfig;
     [SerializeField] private ProgressBar progressBar;
-    
+    [SerializeField] private BalanceConfig _balanceConfig;
+    [SerializeField] private TextMeshProUGUI _balanceText;
+
     private void Awake()
     {
+        _disabledBusiness.enabled = _businessConfig.Values.LvlOfBusiness == 0;
         CurrentProgressPercentage();
         NameOFCanvasElements();
         _profitTimeVariable = _businessConfig.Values.ProfitTime;
@@ -62,6 +65,7 @@ public class BusinessWindowManager : MonoBehaviour
 
     private void NameOFCanvasElements()
     {
+        _currentLvl.text = "Lvl \n" + _businessConfig.Values.LvlOfBusiness;
         _businessText.text = _businessConfig.Values.BusinessName + ":";
         _progressPercentage.text = _businessConfig.Values.ProgressPercentage+" %";
         
@@ -69,7 +73,7 @@ public class BusinessWindowManager : MonoBehaviour
         if (_businessConfig.Values.FirstUpgradeButActivity)
         {
             _firstUpgradeText.text = _businessConfig.Values.FirstUpgrdName +"+"+ 
-                                     _businessConfig.Values.FirstUpgradePricePercentage + "% :" + "\n"+ 
+                                     _businessConfig.Values.FirstUpgradePercentage + "% :" + "\n"+ 
                                      _businessConfig.Values.FirstUpgrdPrice + "$";
         }
         else
@@ -79,7 +83,7 @@ public class BusinessWindowManager : MonoBehaviour
         if (_businessConfig.Values.SecondUpgradeButActivity)
         {
             _secondUpgradeText.text = _businessConfig.Values.SecondUpgrdName +"+"+ 
-                                      _businessConfig.Values.SecondUpgradePricePercentage + "% :" + "\n" + 
+                                      _businessConfig.Values.SecondUpgradePercentage + "% :" + "\n" + 
                                       _businessConfig.Values.SecondUpgrdPrice + "$";
         }
         else
@@ -94,9 +98,10 @@ public class BusinessWindowManager : MonoBehaviour
 
     private void Update()
     {
-        ProfitBar();
-        _balance.text ="Current account balance: " + _businessConfig.Values.Balance.ToString("0.00") + "$";
+        _balanceText.text ="Current account balance: " + _balanceConfig.Balance.BalanceValue.ToString("0.00") + "$";
         _currentLvl.text = "Lvl \n" + _businessConfig.Values.LvlOfBusiness;
+        if (_disabledBusiness.enabled == true)return;
+        ProfitBar();
     }
 
     private void ProfitBar()
@@ -107,7 +112,7 @@ public class BusinessWindowManager : MonoBehaviour
         _fillBar.fillAmount =(1- normalizedValue);
         if (_profitTimeVariable <= 0)
         {
-            _businessConfig.Values.Balance += _businessConfig.Values.ProfitValue;
+            _balanceConfig.Balance.BalanceValue += _businessConfig.Values.ProfitValue;
             _profitTimeVariable = _businessConfig.Values.ProfitTime;
         }
     }

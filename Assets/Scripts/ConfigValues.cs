@@ -6,7 +6,6 @@ namespace DefaultNamespace
     [Serializable]
     public class ConfigValues
     {
-        public float Balance;
         public int LvlOfBusiness;
         public float ProfitValue;
         public float LvlUpPrice;
@@ -21,7 +20,7 @@ namespace DefaultNamespace
         public bool LvllUpButActivity;
         public bool FirstUpgradeButActivity;
         public bool SecondUpgradeButActivity;
-        public float FirstUpgradePricePercentage;
-        public float SecondUpgradePricePercentage;
+        public float FirstUpgradePercentage;
+        public float SecondUpgradePercentage;
     }
 }
