@@ -20,49 +20,17 @@ public class BusinessWindowManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _lvlUpPriceText;
     [SerializeField] private TextMeshProUGUI _firstUpgradeText;
     [SerializeField] private TextMeshProUGUI _secondUpgradeText;
-    [SerializeField] private TextMeshProUGUI _profitTimeText;
-    [SerializeField] private Image _fillBar;
     [SerializeField] private Image _disabledBusiness;
-    private float _profitTimeVariable;
     [SerializeField] private BusinessConfig _businessConfig;
-    [SerializeField] private ProgressBar progressBar;
     [SerializeField] private BalanceConfig _balanceConfig;
     [SerializeField] private TextMeshProUGUI _balanceText;
+    [SerializeField] ProfitBarScript _profitBar;
 
     private void Awake()
     {
         _disabledBusiness.enabled = _businessConfig.Values.LvlOfBusiness == 0;
-        CurrentProgressPercentage();
         NameOFCanvasElements();
-        _profitTimeVariable = _businessConfig.Values.ProfitTime;
-        _profitTimeText.text = _businessConfig.Values.ProfitTime.ToString("0.0" + "s.");
-        _fillBar.fillAmount = 0;
     }
-
-    private void CurrentProgressPercentage()
-    {
-        _businessConfig.Values.ProgressPercentage = 0;
-        switch (_businessConfig.Values.LvlOfBusiness)
-        {
-            case 0: _businessConfig.Values.ProgressPercentage += 0; break;
-            case 1: _businessConfig.Values.ProgressPercentage += 10; break;
-            case 2: _businessConfig.Values.ProgressPercentage += 20; break;
-            case 3: _businessConfig.Values.ProgressPercentage += 30; break;
-            case 4: _businessConfig.Values.ProgressPercentage += 40; break;
-            case 5: _businessConfig.Values.ProgressPercentage += 50; break;
-        }
-
-        if (!_businessConfig.Values.FirstUpgradeButActivity)
-        {
-            _businessConfig.Values.ProgressPercentage += 25;
-        }
-        if (!_businessConfig.Values.SecondUpgradeButActivity)
-        {
-            _businessConfig.Values.ProgressPercentage += 25;
-        }
-        progressBar.AwakeFillValue();
-    }
-
     private void NameOFCanvasElements()
     {
         _currentLvl.text = "Lvl: \n" + _businessConfig.Values.LvlOfBusiness;
@@ -101,20 +69,6 @@ public class BusinessWindowManager : MonoBehaviour
         _balanceText.text ="Current account balance: " + _balanceConfig.Balance.BalanceValue.ToString("0.00") + "$";
         _currentLvl.text = "Lvl: \n" + _businessConfig.Values.LvlOfBusiness;
         if (_disabledBusiness.enabled == true)return;
-        ProfitBar();
+        _profitBar.ProfitBar(_businessConfig.Values.ProfitTime, _businessConfig.Values.ProfitValue);
     }
-
-    private void ProfitBar()
-    {
-        _profitTimeVariable -= Time.deltaTime;
-        _profitTimeText.text = _profitTimeVariable.ToString("0.0" + "s.");
-        var normalizedValue = Mathf.Clamp(_profitTimeVariable / _businessConfig.Values.ProfitTime, 0.0f ,1.0f);
-        _fillBar.fillAmount =(1- normalizedValue);
-        if (_profitTimeVariable <= 0)
-        {
-            _balanceConfig.Balance.BalanceValue += _businessConfig.Values.ProfitValue;
-            _profitTimeVariable = _businessConfig.Values.ProfitTime;
-        }
-    }
-    
 }
