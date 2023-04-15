@@ -31,11 +31,8 @@ namespace DefaultNamespace
         {
             if (!(_balanceConfig.Balance.BalanceValue >= _businessConfig.Values.FirstUpgrdPrice)) return;
             _balanceConfig.Balance.BalanceValue -= _businessConfig.Values.FirstUpgrdPrice;
-            if (_businessText.text != _businessConfig.Values.SecondUpgrdName)
-            {
-                _businessText.text = _businessConfig.Values.FirstUpgrdName + ":";
-                _businessConfig.Values.BusinessName = _businessConfig.Values.FirstUpgrdName;
-            }
+            _businessText.text = _businessConfig.Values.FirstUpgrdName + ":";
+            _businessConfig.Values.BusinessName = _businessConfig.Values.FirstUpgrdName;
             _businessConfig.Values.ProfitValue *= 1 + (_businessConfig.Values.FirstUpgradePercentage / 100);
             _currentProfit.text = "Profit: " + _businessConfig.Values.ProfitValue.ToString("0.00") + "$";
             _firstButtonText.text = "Upgrade is Sold";

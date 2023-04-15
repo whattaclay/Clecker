@@ -12,7 +12,7 @@ using ProgressBar = DefaultNamespace.ProgressBar;
 using Slider = UnityEngine.UI.Slider;
 
 public class BusinessWindowManager : MonoBehaviour
-{/*сделать покупку улучшений за деньги*/
+{
     [SerializeField] private TextMeshProUGUI _businessText;
     [SerializeField] private TextMeshProUGUI _progressPercentage;
     [SerializeField] private TextMeshProUGUI _currentLvl;
@@ -65,7 +65,7 @@ public class BusinessWindowManager : MonoBehaviour
 
     private void NameOFCanvasElements()
     {
-        _currentLvl.text = "Lvl \n" + _businessConfig.Values.LvlOfBusiness;
+        _currentLvl.text = "Lvl: \n" + _businessConfig.Values.LvlOfBusiness;
         _businessText.text = _businessConfig.Values.BusinessName + ":";
         _progressPercentage.text = _businessConfig.Values.ProgressPercentage+" %";
         
@@ -73,7 +73,7 @@ public class BusinessWindowManager : MonoBehaviour
         if (_businessConfig.Values.FirstUpgradeButActivity)
         {
             _firstUpgradeText.text = _businessConfig.Values.FirstUpgrdName +"+"+ 
-                                     _businessConfig.Values.FirstUpgradePercentage + "% :" + "\n"+ 
+                                     _businessConfig.Values.FirstUpgradePercentage + "%:" + "\n"+ 
                                      _businessConfig.Values.FirstUpgrdPrice + "$";
         }
         else
@@ -83,7 +83,7 @@ public class BusinessWindowManager : MonoBehaviour
         if (_businessConfig.Values.SecondUpgradeButActivity)
         {
             _secondUpgradeText.text = _businessConfig.Values.SecondUpgrdName +"+"+ 
-                                      _businessConfig.Values.SecondUpgradePercentage + "% :" + "\n" + 
+                                      _businessConfig.Values.SecondUpgradePercentage + "%:" + "\n" + 
                                       _businessConfig.Values.SecondUpgrdPrice + "$";
         }
         else
@@ -99,7 +99,7 @@ public class BusinessWindowManager : MonoBehaviour
     private void Update()
     {
         _balanceText.text ="Current account balance: " + _balanceConfig.Balance.BalanceValue.ToString("0.00") + "$";
-        _currentLvl.text = "Lvl \n" + _businessConfig.Values.LvlOfBusiness;
+        _currentLvl.text = "Lvl: \n" + _businessConfig.Values.LvlOfBusiness;
         if (_disabledBusiness.enabled == true)return;
         ProfitBar();
     }

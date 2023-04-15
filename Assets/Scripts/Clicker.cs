@@ -10,17 +10,17 @@ namespace DefaultNamespace
     {
         [SerializeField] private BusinessConfig _businessConfig;
         [SerializeField] private BalanceConfig _balanceConfig;
-        [SerializeField] private TextMeshProUGUI _flyingText;
+        /*[SerializeField] private TextMeshProUGUI _flyingText;
         [SerializeField] private RectTransform _flyPosition;
-        private float coolDown = 0f;
+        private float coolDown = 0f;*/
         
         public void ByClick()
         {
             _balanceConfig.Balance.BalanceValue += _businessConfig.Values.ProfitValue / 30;
-            FlyingText();
+            /*FlyingText();*/
         }
 
-        private void FlyingText()
+        /*private void FlyingText()
         {
             coolDown = 1f;
             var textSpawn = Instantiate(_flyingText, _flyPosition);
@@ -34,10 +34,10 @@ namespace DefaultNamespace
 
         private void Update()
         {
-            if (coolDown >=0)
+            if (coolDown >0)
             {
                 coolDown -= Time.deltaTime;
             }
-        }
+        }*/
     }
 }
