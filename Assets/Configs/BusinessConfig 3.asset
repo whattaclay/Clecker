@@ -15,7 +15,7 @@ MonoBehaviour:
   _values:
     LvlOfBusiness: 0
     ProfitValue: 200
-    LvlUpPrice: 6000
+    LvlUpPrice: 12000
     FirstUpgrdPrice: 18000
     FirstUpgrdName: none
     SecondUpgrdPrice: 36000
