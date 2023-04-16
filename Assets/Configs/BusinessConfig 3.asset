@@ -17,12 +17,12 @@ MonoBehaviour:
     ProfitValue: 200
     LvlUpPrice: 12000
     FirstUpgrdPrice: 18000
-    FirstUpgrdName: none
+    FirstUpgrdName: "\u0421arsharing owner"
     SecondUpgrdPrice: 36000
-    SecondUpgrdName: none
-    ProgressPercentage: 10
+    SecondUpgrdName: Car dealership owner
+    ProgressPercentage: 0
     ProfitTime: 10
-    BusinessName: none
+    BusinessName: Owner of an auto repair shop
     NextLevelMultiplier: 2
     LvllUpButActivity: 1
     FirstUpgradeButActivity: 1

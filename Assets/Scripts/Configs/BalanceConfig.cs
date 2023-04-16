@@ -1,7 +1,6 @@
-﻿using UnityEditor.U2D.Path;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace DefaultNamespace
+namespace Configs
 {
     [CreateAssetMenu(menuName = nameof(BalanceConfig))]
     public class BalanceConfig: ScriptableObject

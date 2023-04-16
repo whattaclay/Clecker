@@ -1,8 +1,6 @@
 ﻿using System;
-using TMPro;
-using UnityEngine;
 
-namespace DefaultNamespace
+namespace Configs
 {
     [Serializable]
     public class Balance

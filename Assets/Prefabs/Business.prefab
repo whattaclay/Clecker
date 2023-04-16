@@ -44,12 +44,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 844e2c719c824152be4fab234ef1bc3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _lvlUpButton: {fileID: 1365619907523290333}
-  _businessConfig: {fileID: 11400000, guid: a5901fab27127734487345b33799c9d7, type: 2}
+  lvlUpButton: {fileID: 1365619907523290333}
+  businessConfig: {fileID: 11400000, guid: a5901fab27127734487345b33799c9d7, type: 2}
   progressBar: {fileID: 218568971}
-  _currentProfit: {fileID: 6479584908512674886}
-  _balanceConfig: {fileID: 11400000, guid: eb47187009890954b9c557ee05c548c6, type: 2}
-  _disabledBusiness: {fileID: 5308792079878991129}
+  currentProfit: {fileID: 6479584908512674886}
+  balanceConfig: {fileID: 11400000, guid: eb47187009890954b9c557ee05c548c6, type: 2}
+  disabledBusiness: {fileID: 5308792079878991129}
 --- !u!1 &493462965
 GameObject:
   m_ObjectHideFlags: 0
@@ -170,13 +170,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7a3654f946142eda4594186e3523057, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _businessText: {fileID: 8666384968056854512}
-  _firstUpgradeButton: {fileID: 907731670390638264}
-  _secondUpgradeButton: {fileID: 604536658739953330}
-  _businessConfig: {fileID: 11400000, guid: a5901fab27127734487345b33799c9d7, type: 2}
+  businessText: {fileID: 8666384968056854512}
+  firstUpgradeButton: {fileID: 907731670390638264}
+  secondUpgradeButton: {fileID: 604536658739953330}
+  businessConfig: {fileID: 11400000, guid: a5901fab27127734487345b33799c9d7, type: 2}
   progressBar: {fileID: 218568971}
-  _currentProfit: {fileID: 6479584908512674886}
-  _balanceConfig: {fileID: 11400000, guid: eb47187009890954b9c557ee05c548c6, type: 2}
+  currentProfit: {fileID: 6479584908512674886}
+  balanceConfig: {fileID: 11400000, guid: eb47187009890954b9c557ee05c548c6, type: 2}
 --- !u!1 &243503317249916794
 GameObject:
   m_ObjectHideFlags: 0
@@ -807,16 +807,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.4117647}
+  m_Color: {r: 0.9826331, g: 1, b: 0.7490566, a: 0.4117647}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: a90d59813b2f053428025cc15976ccb1, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -836,20 +836,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 674435e9be363ea45bb9bacaa6e309ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _businessText: {fileID: 8666384968056854512}
-  _progressPercentage: {fileID: 1540169904963842179}
-  _currentLvl: {fileID: 5161353237850754602}
-  _currentProfit: {fileID: 6479584908512674886}
-  _lvlUpPriceText: {fileID: 1569686311871281779}
-  _firstUpgradeText: {fileID: 2534506014216094677}
-  _secondUpgradeText: {fileID: 5675787446010767176}
-  _profitTimeText: {fileID: 995578918428937033}
-  _disabledBusiness: {fileID: 5308792079878991129}
-  _businessConfig: {fileID: 11400000, guid: a5901fab27127734487345b33799c9d7, type: 2}
-  progressBar: {fileID: 218568971}
-  _balanceConfig: {fileID: 11400000, guid: eb47187009890954b9c557ee05c548c6, type: 2}
-  _balanceText: {fileID: 0}
-  _profitBar: {fileID: 1765834417912213454}
+  businessText: {fileID: 8666384968056854512}
+  progressPercentage: {fileID: 1540169904963842179}
+  currentLvl: {fileID: 5161353237850754602}
+  currentProfit: {fileID: 6479584908512674886}
+  firstUpgradeText: {fileID: 2534506014216094677}
+  secondUpgradeText: {fileID: 5675787446010767176}
+  disabledBusiness: {fileID: 5308792079878991129}
+  businessConfig: {fileID: 11400000, guid: a5901fab27127734487345b33799c9d7, type: 2}
+  balanceConfig: {fileID: 11400000, guid: eb47187009890954b9c557ee05c548c6, type: 2}
+  balanceText: {fileID: 0}
+  profitBar: {fileID: 1765834417912213454}
 --- !u!1 &2612406969827246552
 GameObject:
   m_ObjectHideFlags: 0
@@ -1922,9 +1919,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a74b3e8373743be996c001b0f46a41e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _fillBar: {fileID: 1360247407267087681}
-  _percentageText: {fileID: 1540169904963842179}
-  _businessConfig: {fileID: 11400000, guid: a5901fab27127734487345b33799c9d7, type: 2}
+  fillBar: {fileID: 1360247407267087681}
+  percentageText: {fileID: 1540169904963842179}
+  businessConfig: {fileID: 11400000, guid: a5901fab27127734487345b33799c9d7, type: 2}
 --- !u!1 &5821561175314616787
 GameObject:
   m_ObjectHideFlags: 0
@@ -1991,7 +1988,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 36bb5f222589ecc41a5bf029a666cc5b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 58c5b3f6e3219284a9ecc03ab63049d3, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2440,7 +2437,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.000022888184}
+  m_AnchoredPosition: {x: 5.3, y: -3.6}
   m_SizeDelta: {x: 25.71, y: -48.2063}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6111988863741501640
@@ -2508,7 +2505,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -2902,5 +2899,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e063d8b9e0041199adb58f9b447db15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _businessConfig: {fileID: 11400000, guid: a5901fab27127734487345b33799c9d7, type: 2}
-  _balanceConfig: {fileID: 11400000, guid: eb47187009890954b9c557ee05c548c6, type: 2}
+  businessConfig: {fileID: 11400000, guid: a5901fab27127734487345b33799c9d7, type: 2}
+  balanceConfig: {fileID: 11400000, guid: eb47187009890954b9c557ee05c548c6, type: 2}

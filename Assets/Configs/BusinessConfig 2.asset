@@ -15,16 +15,15 @@ MonoBehaviour:
   _values:
     LvlOfBusiness: 0
     ProfitValue: 40
-    LvlUpPrice: 1800
+    LvlUpPrice: 1200
     FirstUpgrdPrice: 3000
-    FirstUpgrdName: none
+    FirstUpgrdName: Sale of Building Materials on your land plot
     SecondUpgrdPrice: 5000
-    SecondUpgrdName: none
+    SecondUpgrdName: Sale of Building Materials in a warehouse.
     ProgressPercentage: 10
     ProfitTime: 6
-    BusinessName: none
+    BusinessName: Sale of Building Materials in the bazaar
     NextLevelMultiplier: 1.5
-    LvllUpButActivity: 1
     FirstUpgradeButActivity: 1
     SecondUpgradeButActivity: 1
     FirstUpgradePercentage: 50

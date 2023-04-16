@@ -17,12 +17,12 @@ MonoBehaviour:
     ProfitValue: 5000
     LvlUpPrice: 100000
     FirstUpgrdPrice: 300000
-    FirstUpgrdName: none
+    FirstUpgrdName: Cryptocurrency(creating a currency)
     SecondUpgrdPrice: 600000
-    SecondUpgrdName: none
-    ProgressPercentage: 10
+    SecondUpgrdName: Cryptocurrency(digital currency exchange)
+    ProgressPercentage: 0
     ProfitTime: 30
-    BusinessName: none
+    BusinessName: Cryptocurrency(trading)
     NextLevelMultiplier: 2
     LvllUpButActivity: 1
     FirstUpgradeButActivity: 1

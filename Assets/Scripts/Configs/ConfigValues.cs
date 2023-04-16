@@ -1,7 +1,6 @@
 ﻿using System;
-using UnityEngine.Serialization;
 
-namespace DefaultNamespace
+namespace Configs
 {
     [Serializable]
     public class ConfigValues
@@ -17,7 +16,6 @@ namespace DefaultNamespace
         public float ProfitTime;
         public string BusinessName;
         public float NextLevelMultiplier;
-        public bool LvllUpButActivity;
         public bool FirstUpgradeButActivity;
         public bool SecondUpgradeButActivity;
         public float FirstUpgradePercentage;

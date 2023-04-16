@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace DefaultNamespace
+namespace Configs
 {
     [CreateAssetMenu(menuName = nameof(BusinessConfig))]
     public class BusinessConfig : ScriptableObject

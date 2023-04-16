@@ -20,11 +20,10 @@ MonoBehaviour:
     FirstUpgrdName: Sale of Tulips in the bazaar
     SecondUpgrdPrice: 300
     SecondUpgrdName: Sale of Tulips in the store
-    ProgressPercentage: 30
+    ProgressPercentage: 50
     ProfitTime: 3
-    BusinessName: Sale of Tulips in the underpass
+    BusinessName: Sale of Tulips in the underground passage
     NextLevelMultiplier: 1.25
-    LvllUpButActivity: 1
     FirstUpgradeButActivity: 1
     SecondUpgradeButActivity: 1
     FirstUpgradePercentage: 25

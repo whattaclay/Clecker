@@ -1,58 +1,54 @@
-﻿using System;
+﻿using Configs;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
-namespace DefaultNamespace
+public class UpgradeButtonManager : MonoBehaviour
 {
-    public class UpgradeButtonManager : MonoBehaviour
+    [SerializeField] private TextMeshProUGUI businessText;
+    [SerializeField] private Button firstUpgradeButton;
+    [SerializeField] private Button secondUpgradeButton;
+    [SerializeField] private BusinessConfig businessConfig;
+    private TextMeshProUGUI _firstButtonText;
+    private TextMeshProUGUI _secondButtonText;
+    [SerializeField] private ProgressBarScript progressBar;
+    private readonly float _progressPercentPerUpgrade = 25;
+    [SerializeField] private TextMeshProUGUI currentProfit;
+    [SerializeField] private BalanceConfig balanceConfig;
+
+    private void Start()
     {
-        [SerializeField] private TextMeshProUGUI _businessText;
-        [SerializeField] private Button _firstUpgradeButton;
-        [SerializeField] private Button _secondUpgradeButton;
-        [SerializeField] private BusinessConfig _businessConfig;
-        private TextMeshProUGUI _firstButtonText;
-        private TextMeshProUGUI _secondButtonText;
-        [SerializeField]private ProgressBar progressBar;
-        private float _progressPercentPerUpgrade = 25;
-        [SerializeField] private TextMeshProUGUI _currentProfit;
-        [SerializeField] private BalanceConfig _balanceConfig;
+        _firstButtonText = firstUpgradeButton.GetComponentInChildren<TextMeshProUGUI>();
+        _secondButtonText = secondUpgradeButton.GetComponentInChildren<TextMeshProUGUI>();
+        secondUpgradeButton.interactable = businessConfig.Values.SecondUpgradeButActivity;
+        firstUpgradeButton.interactable = businessConfig.Values.FirstUpgradeButActivity;
+    }
 
-        private void Start()
-        {
-            _firstButtonText = _firstUpgradeButton.GetComponentInChildren<TextMeshProUGUI>();
-            _secondButtonText = _secondUpgradeButton.GetComponentInChildren<TextMeshProUGUI>();
-            _secondUpgradeButton.interactable = _businessConfig.Values.SecondUpgradeButActivity;
-            _firstUpgradeButton.interactable = _businessConfig.Values.FirstUpgradeButActivity;
-        }
-
-        public void FirstUpgradeButtonState()
-        {
-            if (!(_balanceConfig.Balance.BalanceValue >= _businessConfig.Values.FirstUpgrdPrice)) return;
-            _balanceConfig.Balance.BalanceValue -= _businessConfig.Values.FirstUpgrdPrice;
-            _businessText.text = _businessConfig.Values.FirstUpgrdName + ":";
-            _businessConfig.Values.BusinessName = _businessConfig.Values.FirstUpgrdName;
-            _businessConfig.Values.ProfitValue *= 1 + (_businessConfig.Values.FirstUpgradePercentage / 100);
-            _currentProfit.text = "Profit: " + _businessConfig.Values.ProfitValue.ToString("0.00") + "$";
-            _firstButtonText.text = "Upgrade is Sold";
-            _firstUpgradeButton.interactable = false;
-            _businessConfig.Values.FirstUpgradeButActivity = false;
-            progressBar.FillValue(_progressPercentPerUpgrade);
-        }
-        public void SecondUpgradeButtonState()
-        {
-            if (!(_balanceConfig.Balance.BalanceValue >= _businessConfig.Values.SecondUpgrdPrice)) return;
-            _balanceConfig.Balance.BalanceValue -= _businessConfig.Values.SecondUpgrdPrice;
-            if (_firstUpgradeButton.interactable) return;
-            _businessText.text = _businessConfig.Values.SecondUpgrdName + ":";
-            _businessConfig.Values.BusinessName = _businessConfig.Values.SecondUpgrdName;
-            _businessConfig.Values.ProfitValue *= 1 + (_businessConfig.Values.SecondUpgradePercentage / 100);
-            _currentProfit.text = "Profit: " + _businessConfig.Values.ProfitValue.ToString("0.00") + "$";
-            _secondButtonText.text = "Upgrade is Sold";
-            _secondUpgradeButton.interactable = false;
-            _businessConfig.Values.SecondUpgradeButActivity = false;
-            progressBar.FillValue(_progressPercentPerUpgrade);
-        } 
+    public void FirstUpgradeButtonState()
+    {
+        if (!(balanceConfig.Balance.BalanceValue >= businessConfig.Values.FirstUpgrdPrice)) return;
+        balanceConfig.Balance.BalanceValue -= businessConfig.Values.FirstUpgrdPrice;
+        businessText.text = businessConfig.Values.FirstUpgrdName + ":";
+        businessConfig.Values.BusinessName = businessConfig.Values.FirstUpgrdName;
+        businessConfig.Values.ProfitValue *= 1 + (businessConfig.Values.FirstUpgradePercentage / 100);
+        currentProfit.text = "Profit: " + businessConfig.Values.ProfitValue.ToString("0.0") + "$";
+        _firstButtonText.text = "Upgrade is Sold";
+        firstUpgradeButton.interactable = false;
+        businessConfig.Values.FirstUpgradeButActivity = false;
+        progressBar.FillValue(_progressPercentPerUpgrade);
+    }
+    public void SecondUpgradeButtonState()
+    {
+        if (firstUpgradeButton.interactable) return;
+        if (!(balanceConfig.Balance.BalanceValue >= businessConfig.Values.SecondUpgrdPrice)) return;
+        balanceConfig.Balance.BalanceValue -= businessConfig.Values.SecondUpgrdPrice;
+        businessText.text = businessConfig.Values.SecondUpgrdName + ":";
+        businessConfig.Values.BusinessName = businessConfig.Values.SecondUpgrdName;
+        businessConfig.Values.ProfitValue *= 1 + (businessConfig.Values.SecondUpgradePercentage / 100);
+        currentProfit.text = "Profit: " + businessConfig.Values.ProfitValue.ToString("0.0") + "$";
+        _secondButtonText.text = "Upgrade is Sold";
+        secondUpgradeButton.interactable = false;
+        businessConfig.Values.SecondUpgradeButActivity = false;
+        progressBar.FillValue(_progressPercentPerUpgrade);
     }
 }

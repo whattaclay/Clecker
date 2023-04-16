@@ -17,12 +17,12 @@ MonoBehaviour:
     ProfitValue: 1000
     LvlUpPrice: 15000
     FirstUpgrdPrice: 45000
-    FirstUpgrdName: none
+    FirstUpgrdName: "Banking business(\u0441ommission income)"
     SecondUpgrdPrice: 90000
-    SecondUpgrdName: none
-    ProgressPercentage: 10
+    SecondUpgrdName: Banking business(issuance of loans)
+    ProgressPercentage: 0
     ProfitTime: 17
-    BusinessName: none
+    BusinessName: Banking business(purchase/sale of shares)
     NextLevelMultiplier: 2
     LvllUpButActivity: 1
     FirstUpgradeButActivity: 1

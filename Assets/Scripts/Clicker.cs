@@ -1,26 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using TMPro;
+﻿using Configs;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.Serialization;
 
-namespace DefaultNamespace
+public class Clicker: MonoBehaviour
 {
-    public class Clicker: MonoBehaviour
-    {
-        [SerializeField] private BusinessConfig _businessConfig;
-        [SerializeField] private BalanceConfig _balanceConfig;
-        /*[SerializeField] private TextMeshProUGUI _flyingText;
+    [SerializeField] private BusinessConfig businessConfig;
+    [SerializeField] private BalanceConfig balanceConfig;
+    /*[SerializeField] private TextMeshProUGUI _flyingText;
         [SerializeField] private RectTransform _flyPosition;
         private float coolDown = 0f;*/
         
-        public void ByClick()
-        {
-            _balanceConfig.Balance.BalanceValue += _businessConfig.Values.ProfitValue / 30;
-            /*FlyingText();*/
-        }
+    public void ByClick()
+    {
+        balanceConfig.Balance.BalanceValue += businessConfig.Values.ProfitValue / 30;
+        /*FlyingText();*/
+    }
 
-        /*private void FlyingText()
+    /*private void FlyingText()
         {
             coolDown = 1f;
             var textSpawn = Instantiate(_flyingText, _flyPosition);
@@ -39,5 +35,4 @@ namespace DefaultNamespace
                 coolDown -= Time.deltaTime;
             }
         }*/
-    }
 }
