@@ -6,12 +6,12 @@ using UnityEngine.UI;
 public class LvlUpButtonManager : MonoBehaviour
 {
         
+    private const float ProgressPercentPerLvlUp = 10;
     [SerializeField] private Button lvlUpButton;
     [SerializeField] private BusinessConfig businessConfig;
     [SerializeField] private ProgressBarScript progressBar;
     [SerializeField] private TextMeshProUGUI currentProfit;
     [SerializeField] private BalanceConfig balanceConfig;
-    private readonly float _progressPercentPerLvlUp = 10;
     [SerializeField] private Image disabledBusiness;
     private TextMeshProUGUI _butText;
 
@@ -29,8 +29,36 @@ public class LvlUpButtonManager : MonoBehaviour
             lvlUpButton.interactable = false;
         }
     }
+        public void LvlUpClick()
+        {
+            if (!(balanceConfig.Balance.BalanceValue>= businessConfig.Values.LvlUpPrice)) return;
+            balanceConfig.Balance.BalanceValue -= businessConfig.Values.LvlUpPrice;
+            progressBar.FillValue(ProgressPercentPerLvlUp);
+            switch (businessConfig.Values.LvlOfBusiness)
+            {
+                case 0:
+                    businessConfig.Values.LvlUpPrice *= businessConfig.Values.NextLevelMultiplier;
+                    _butText.text = "Lvl Up \n Price: " + businessConfig.Values.LvlUpPrice.ToString("0.0")+ "$";
+                    disabledBusiness.enabled = false;
+                    businessConfig.Values.LvlOfBusiness++;
+                    return;
+                case 4:
+                    businessConfig.Values.ProfitValue *= businessConfig.Values.NextLevelMultiplier;
+                    currentProfit.text = "Profit: " + businessConfig.Values.ProfitValue.ToString("0.0") + "$";
+                    _butText.text = "Max Level";
+                    lvlUpButton.interactable = false;
+                    businessConfig.Values.LvlOfBusiness++;
+                    return;
+            }
 
-    public void ClickMultiplier()
+            businessConfig.Values.LvlUpPrice *= businessConfig.Values.NextLevelMultiplier;
+            businessConfig.Values.ProfitValue *= businessConfig.Values.NextLevelMultiplier;
+            currentProfit.text = "Profit: " + businessConfig.Values.ProfitValue.ToString("0.0") + "$";
+            _butText.text = "Lvl Up \n Price: " + businessConfig.Values.LvlUpPrice.ToString("0.0") + "$";
+            businessConfig.Values.LvlOfBusiness++;
+        }
+    //то же, только на каждое значение
+    /*public void LvlUpClick()
     {
         if (!(balanceConfig.Balance.BalanceValue>= businessConfig.Values.LvlUpPrice)) return;
         balanceConfig.Balance.BalanceValue -= businessConfig.Values.LvlUpPrice;
@@ -39,7 +67,6 @@ public class LvlUpButtonManager : MonoBehaviour
         {
             case 0:
                 businessConfig.Values.LvlUpPrice *= businessConfig.Values.NextLevelMultiplier;
-                currentProfit.text = "Profit: " + businessConfig.Values.ProfitValue.ToString("0.0") + "$";
                 _butText.text = "Lvl Up \n Price: " + businessConfig.Values.LvlUpPrice.ToString("0.0")+ "$";
                 disabledBusiness.enabled = false;
                 break;
@@ -70,4 +97,7 @@ public class LvlUpButtonManager : MonoBehaviour
         }
         businessConfig.Values.LvlOfBusiness++;
     }
+        */
+
+    
 }

@@ -2256,8 +2256,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 203476683}
-        m_TargetAssemblyTypeName: DefaultNamespace.ButtonManager, Assembly-CSharp
-        m_MethodName: ClickMultiplier
+        m_TargetAssemblyTypeName: LvlUpButtonManager, Assembly-CSharp
+        m_MethodName: LvlUpClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

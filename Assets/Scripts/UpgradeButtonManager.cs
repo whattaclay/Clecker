@@ -5,16 +5,16 @@ using UnityEngine.UI;
 
 public class UpgradeButtonManager : MonoBehaviour
 {
+    private const float ProgressPercentPerUpgrade = 25;
     [SerializeField] private TextMeshProUGUI businessText;
     [SerializeField] private Button firstUpgradeButton;
     [SerializeField] private Button secondUpgradeButton;
     [SerializeField] private BusinessConfig businessConfig;
-    private TextMeshProUGUI _firstButtonText;
-    private TextMeshProUGUI _secondButtonText;
     [SerializeField] private ProgressBarScript progressBar;
-    private readonly float _progressPercentPerUpgrade = 25;
     [SerializeField] private TextMeshProUGUI currentProfit;
     [SerializeField] private BalanceConfig balanceConfig;
+    private TextMeshProUGUI _firstButtonText;
+    private TextMeshProUGUI _secondButtonText;
 
     private void Start()
     {
@@ -35,7 +35,7 @@ public class UpgradeButtonManager : MonoBehaviour
         _firstButtonText.text = "Upgrade is Sold";
         firstUpgradeButton.interactable = false;
         businessConfig.Values.FirstUpgradeButActivity = false;
-        progressBar.FillValue(_progressPercentPerUpgrade);
+        progressBar.FillValue(ProgressPercentPerUpgrade);
     }
     public void SecondUpgradeButtonState()
     {
@@ -49,6 +49,6 @@ public class UpgradeButtonManager : MonoBehaviour
         _secondButtonText.text = "Upgrade is Sold";
         secondUpgradeButton.interactable = false;
         businessConfig.Values.SecondUpgradeButActivity = false;
-        progressBar.FillValue(_progressPercentPerUpgrade);
+        progressBar.FillValue(ProgressPercentPerUpgrade);
     }
 }
