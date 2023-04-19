@@ -28,3 +28,4 @@ MonoBehaviour:
     SecondUpgradeButActivity: 1
     FirstUpgradePercentage: 25
     SecondUpgradePercentage: 50
+    Skins: {fileID: 11400000, guid: 8c503cc4614534b4caefc246ee5a99e0, type: 2}

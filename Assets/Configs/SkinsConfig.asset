@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7959eb526b445b697eae14ff0a88035, type: 3}
+  m_Name: SkinsConfig
+  m_EditorClassIdentifier: 
+  _skins:
+  - SkinImage: {fileID: 21300000, guid: ce7e1d32b311b9349bdb43e2838cfec8, type: 3}
+    SkinName: ssss
+    BuyButton: {fileID: 0}
+    BuyButoonText: aoaoaoaoao
+    SkinPrice: 0
+    UseState: 0
+  - SkinImage: {fileID: 21300000, guid: edaf2e853e686554fa7007358ee2d4cd, type: 3}
+    SkinName: dddd
+    BuyButton: {fileID: 0}
+    BuyButoonText: aoaoaoaoao
+    SkinPrice: 0
+    UseState: 0
+  - SkinImage: {fileID: 21300000, guid: 8ee176891cb83554e94350b7815a2246, type: 3}
+    SkinName: rrrrr
+    BuyButton: {fileID: 0}
+    BuyButoonText: aoaoaoaoao
+    SkinPrice: 0
+    UseState: 0

@@ -24,8 +24,8 @@ MonoBehaviour:
     ProfitTime: 30
     BusinessName: Cryptocurrency(trading)
     NextLevelMultiplier: 2
-    LvllUpButActivity: 1
     FirstUpgradeButActivity: 1
     SecondUpgradeButActivity: 1
     FirstUpgradePercentage: 75
     SecondUpgradePercentage: 125
+    Skins: {fileID: 11400000, guid: 8c503cc4614534b4caefc246ee5a99e0, type: 2}
