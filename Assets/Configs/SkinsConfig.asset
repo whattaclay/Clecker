@@ -13,21 +13,57 @@ MonoBehaviour:
   m_Name: SkinsConfig
   m_EditorClassIdentifier: 
   _skins:
-  - SkinImage: {fileID: 21300000, guid: ce7e1d32b311b9349bdb43e2838cfec8, type: 3}
-    SkinName: ssss
-    BuyButton: {fileID: 0}
-    BuyButoonText: aoaoaoaoao
-    SkinPrice: 0
+  - SkinImage: {fileID: 21300000, guid: 2538ea51a85e85c43b6cbb8e2830c1d3, type: 3}
+    SkinName: Standart Skin
+    BuyButoonText: Is used!
+    SkinPrice: 10
+    UseState: 1
+    BuyState: 1
+  - SkinImage: {fileID: 21300000, guid: cf08883dd4ec3374d86fee093b5b0a6e, type: 3}
+    SkinName: Black Bitcoin
+    BuyButoonText: Use!
+    SkinPrice: 20
     UseState: 0
+    BuyState: 0
+  - SkinImage: {fileID: 21300000, guid: 4d098681fe1bd9245bcde709fcff13fd, type: 3}
+    SkinName: CoinTorus
+    BuyButoonText: Use!
+    SkinPrice: 30
+    UseState: 0
+    BuyState: 0
   - SkinImage: {fileID: 21300000, guid: edaf2e853e686554fa7007358ee2d4cd, type: 3}
-    SkinName: dddd
-    BuyButton: {fileID: 0}
-    BuyButoonText: aoaoaoaoao
-    SkinPrice: 0
+    SkinName: CrypRocket Coin
+    BuyButoonText: 40$
+    SkinPrice: 40
     UseState: 0
+    BuyState: 0
+  - SkinImage: {fileID: 21300000, guid: 1efbda2736732784f93951b6c059d3c1, type: 3}
+    SkinName: Dogge Coin
+    BuyButoonText: 50$
+    SkinPrice: 50
+    UseState: 0
+    BuyState: 0
+  - SkinImage: {fileID: 21300000, guid: ce7e1d32b311b9349bdb43e2838cfec8, type: 3}
+    SkinName: Drawing Bitcoin
+    BuyButoonText: 60$
+    SkinPrice: 60
+    UseState: 0
+    BuyState: 0
   - SkinImage: {fileID: 21300000, guid: 8ee176891cb83554e94350b7815a2246, type: 3}
-    SkinName: rrrrr
-    BuyButton: {fileID: 0}
-    BuyButoonText: aoaoaoaoao
-    SkinPrice: 0
+    SkinName: Gold Bitcoin
+    BuyButoonText: 70$
+    SkinPrice: 70
     UseState: 0
+    BuyState: 0
+  - SkinImage: {fileID: 21300000, guid: 50b7dd283f10ddd46b1632e2360137d2, type: 3}
+    SkinName: Lite Coin
+    BuyButoonText: 80$
+    SkinPrice: 80
+    UseState: 0
+    BuyState: 0
+  - SkinImage: {fileID: 21300000, guid: d91adb0a23989474b88bf9c91b0d4217, type: 3}
+    SkinName: Souvenir Bitcoin
+    BuyButoonText: 90$
+    SkinPrice: 90
+    UseState: 0
+    BuyState: 0

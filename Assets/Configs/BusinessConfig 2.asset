@@ -28,4 +28,4 @@ MonoBehaviour:
     SecondUpgradeButActivity: 1
     FirstUpgradePercentage: 50
     SecondUpgradePercentage: 75
-    Skins: {fileID: 11400000, guid: 8c503cc4614534b4caefc246ee5a99e0, type: 2}
+    ClickerSkin: {fileID: 21300000, guid: 2538ea51a85e85c43b6cbb8e2830c1d3, type: 3}

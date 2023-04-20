@@ -21,6 +21,6 @@ namespace Configs
         public bool SecondUpgradeButActivity;
         public float FirstUpgradePercentage;
         public float SecondUpgradePercentage;
-        [SerializeField] private SkinsConfig Skins;
+        public Sprite ClickerSkin;
     }
 }

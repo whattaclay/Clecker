@@ -1,16 +1,12 @@
-﻿using Configs;
+﻿using System;
+using Configs;
 using UnityEngine;
 
 namespace Skins
 {
     public class SkinManager : MonoBehaviour
-    {   /// <summary>
-        /// сделать экшн ивент по нажатию кнопки купить, который меняет текст написанного
-        /// с цены, купить на использовать\используется
-        /// добавить один стандартный скин, на котором только  использовать\используется
-        /// подвязать в префаб с бизнесами
-        /// </summary>
-        [SerializeField]private SkinsConfig _skinsConfig;
+    {   
+        [SerializeField] private SkinsConfig _skinsConfig;
         [SerializeField] private SkinArea _skinPrefab;
         [SerializeField] private RectTransform _content;
         private void Awake()

@@ -1,6 +1,8 @@
-﻿using Configs;
+﻿using System;
+using Configs;
 using UnityEngine;
 using UnityEngine.Serialization;
+using UnityEngine.UI;
 
 public class Clicker: MonoBehaviour
 {
@@ -9,7 +11,6 @@ public class Clicker: MonoBehaviour
     /*[SerializeField] private TextMeshProUGUI _flyingText;
         [SerializeField] private RectTransform _flyPosition;
         private float coolDown = 0f;*/
-        
     public void ByClick()
     {
         balanceConfig.Balance.BalanceValue += businessConfig.Values.ProfitValue / 30;

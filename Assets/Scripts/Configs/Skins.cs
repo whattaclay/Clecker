@@ -13,9 +13,9 @@ namespace Configs
     {
          public Sprite SkinImage;
          public string SkinName;
-         public Button BuyButton;
          public string BuyButoonText;
          public int SkinPrice;
          public bool UseState;
+         public bool BuyState;
     }
 }

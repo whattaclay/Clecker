@@ -13,9 +13,8 @@ public class BusinessWindowManager : MonoBehaviour
      [SerializeField] private TextMeshProUGUI secondUpgradeText;
      [SerializeField] private Image disabledBusiness;
      [SerializeField] private BusinessConfig businessConfig;
-     [SerializeField] private BalanceConfig balanceConfig;
-     [SerializeField] private TextMeshProUGUI balanceText;
-     [SerializeField] ProfitBarScript profitBar;
+     [SerializeField] private ProfitBarScript profitBar;
+     [SerializeField] private Image clickerImage;
 
     private void Awake()
     {
@@ -52,7 +51,7 @@ public class BusinessWindowManager : MonoBehaviour
     }
     private void Update()
     {
-        balanceText.text ="Current account balance: " + balanceConfig.Balance.BalanceValue.ToString("0.0") + "$";
+        clickerImage.sprite = businessConfig.Values.ClickerSkin;
         currentLvl.text = "Lvl: \n" + businessConfig.Values.LvlOfBusiness;
         if (disabledBusiness.enabled == true)return;
         profitBar.ProfitBar(businessConfig.Values.ProfitTime, businessConfig.Values.ProfitValue);
