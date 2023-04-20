@@ -1,18 +1,14 @@
-﻿using System;
-using Configs;
+﻿using Configs;
 using TMPro;
 using UnityEngine;
 
-namespace DefaultNamespace
+public class BalanceTextManager: MonoBehaviour
 {
-    public class BalanceTextManager: MonoBehaviour
-    {
-        [SerializeField] private BalanceConfig balance;
-        [SerializeField] private TextMeshProUGUI balanceText;
+    [SerializeField] private BalanceConfig balance;
+    [SerializeField] private TextMeshProUGUI balanceText;
 
-        private void Update()
-        {
-            balanceText.text ="Current account balance: " + balance.Balance.BalanceValue.ToString("0.0") + "$";
-        }
+    private void Update()
+    {
+        balanceText.text ="Current account balance: " + balance.Balance.balanceValue.ToString("0.0") + "$";
     }
 }

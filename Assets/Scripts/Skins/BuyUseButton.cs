@@ -7,66 +7,81 @@ using UnityEngine.UI;
 
 namespace Skins
 {
-    // todo разнести этот огромный класс по логике
-    
     public class BuyUseButton : MonoBehaviour
     {
-        [SerializeField] private Button button;
+        [SerializeField] private TextMeshProUGUI buttonText;
         [SerializeField] private SkinsConfig skinConfig;
         [SerializeField] private BalanceConfig balance;
         [SerializeField] private TextMeshProUGUI skinNumberText;
         [SerializeField] private BusinessConfig[] businessConfigs;
 
         private int _skinNumber;
+        
+
         private void Start()
         {
             _skinNumber = int.Parse(skinNumberText.text)-1;
-            if (!skinConfig.SkinsScript[_skinNumber].BuyState)
-            {
-                skinConfig.SkinsScript[_skinNumber].BuyButoonText = skinConfig.SkinsScript[_skinNumber].SkinPrice + "$";
-                return;
-            }
-            skinConfig.SkinsScript[_skinNumber].BuyButoonText = !skinConfig.SkinsScript[_skinNumber].UseState ? "Use!" : "Is used!";
+            SetButtonText();
         }
-
-        private void Update()
+        private void OnEnable()
         {
-            button.GetComponentInChildren<TextMeshProUGUI>().text = skinConfig.SkinsScript[_skinNumber].BuyButoonText ;
+            SetButtonText();
+        }
+        private void Update()
+        {//обновляет надпись на кнопке покупки/использования
+            buttonText.text = skinConfig.SkinsScript[_skinNumber].buyButtonText;
         }
 
         public void OnClickBuyUseButton()
         {
-            var _skinConfig = skinConfig.SkinsScript[_skinNumber];
+            var config = skinConfig.SkinsScript[_skinNumber];
             
             CanBuyView();
-            if (!_skinConfig.BuyState) return;
-            if (_skinConfig.UseState) return;
+            //если не куплено, выходит
+            if (!config.buyState) return;
+            //если скин уже используется, выходит
+            if (config.useState) return;
             UseStateSwitcher();
-            _skinConfig.BuyButoonText ="Is used!";
+            //меняет текст выбранной кнопки
+            config.buyButtonText ="Is used!";
+            //меняет скин кликера в каждом префабе бизнеса
             foreach (var businessConfig in businessConfigs)
             {
-                businessConfig.Values.ClickerSkin = _skinConfig.SkinImage;
+                businessConfig.Values.clickerSkin = config.skinImage;
             }
         }
-
+        private void SetButtonText()
+        {
+            //если кнопка не куплена, то текст выводится (цена покупки + "$")
+            if (!skinConfig.SkinsScript[_skinNumber].buyState)
+            {
+                skinConfig.SkinsScript[_skinNumber].buyButtonText = skinConfig.SkinsScript[_skinNumber].skinPrice + "$";
+                return;
+            }
+            //если купленна, то проверяет используется ли, и выводит соответствующий текст
+            skinConfig.SkinsScript[_skinNumber].buyButtonText = !skinConfig.SkinsScript[_skinNumber].useState ? "Use!" : "Is used!";
+        }
+        //проверка на способность купить скин
         private void CanBuyView()
         {
-            var _skinConfig = skinConfig.SkinsScript[_skinNumber];
-            if (_skinConfig.BuyState) return;
-            if (!(balance.Balance.BalanceValue >= _skinConfig.SkinPrice)) return;
-            balance.Balance.BalanceValue -= _skinConfig.SkinPrice;
-            _skinConfig.BuyState = true;
+            var config = skinConfig.SkinsScript[_skinNumber];
+            if (config.buyState) return;
+            if (!(balance.Balance.balanceValue >= config.skinPrice)) return;
+            balance.Balance.balanceValue -= config.skinPrice;
+            config.buyState = true;
         }
+        //меняет текст на всех купленных скинах на "использовать" и меняет UseState на false
+        //а на выбранном скине на true
         private void UseStateSwitcher()
         {
-            skinConfig.SkinsScript[_skinNumber].UseState = true;
+            skinConfig.SkinsScript[_skinNumber].useState = true;
             for (int i = 0; i < skinConfig.SkinsScript.Length ; i++)
             {
                 if(i == _skinNumber)continue;
-                skinConfig.SkinsScript[i].UseState = false;
-                if (skinConfig.SkinsScript[i].BuyState)
+                skinConfig.SkinsScript[i].useState = false;
+                if (skinConfig.SkinsScript[i].buyState)
                 {
-                    skinConfig.SkinsScript[i].BuyButoonText = "Use!";
+                    skinConfig.SkinsScript[i].buyButtonText = "Use!";
                 }
             }
         }

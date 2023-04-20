@@ -1830,6 +1830,10 @@ PrefabInstance:
       propertyPath: clickerImage
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 6189374264873506108, guid: abac7a89d84f20f469d9baccb13af2ef, type: 3}
+      propertyPath: businessConfig
+      value: 
+      objectReference: {fileID: 11400000, guid: cce2ccfe077273f4484ffdc3d4a0a92d, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: abac7a89d84f20f469d9baccb13af2ef, type: 3}
 --- !u!1001 &701658985
@@ -2021,9 +2025,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68d9e7782d2d4694924d16f785e42346, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _skinsConfig: {fileID: 11400000, guid: 8c503cc4614534b4caefc246ee5a99e0, type: 2}
-  _skinPrefab: {fileID: 2010184540473697724, guid: eae445c7a899aa2458cd7794d65056e9, type: 3}
-  _content: {fileID: 1370845811}
+  skinsConfig: {fileID: 11400000, guid: 8c503cc4614534b4caefc246ee5a99e0, type: 2}
+  skinPrefab: {fileID: 2010184540473697724, guid: eae445c7a899aa2458cd7794d65056e9, type: 3}
+  content: {fileID: 1370845811}
 --- !u!224 &906566324 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2136842507653290291, guid: abac7a89d84f20f469d9baccb13af2ef, type: 3}
@@ -2304,6 +2308,10 @@ PrefabInstance:
       propertyPath: clickerImage
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 6189374264873506108, guid: abac7a89d84f20f469d9baccb13af2ef, type: 3}
+      propertyPath: businessConfig
+      value: 
+      objectReference: {fileID: 11400000, guid: cc8d56dbc8d3b5c49941f43f97911fc6, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: abac7a89d84f20f469d9baccb13af2ef, type: 3}
 --- !u!1 &939807474
@@ -4125,6 +4133,10 @@ PrefabInstance:
       propertyPath: clickerImage
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 6189374264873506108, guid: abac7a89d84f20f469d9baccb13af2ef, type: 3}
+      propertyPath: businessConfig
+      value: 
+      objectReference: {fileID: 11400000, guid: 95f8cd95fc654364eaf44c0afd7bb824, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: abac7a89d84f20f469d9baccb13af2ef, type: 3}
 --- !u!1 &1518542852
@@ -4502,6 +4514,10 @@ PrefabInstance:
       propertyPath: clickerImage
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 6189374264873506108, guid: abac7a89d84f20f469d9baccb13af2ef, type: 3}
+      propertyPath: businessConfig
+      value: 
+      objectReference: {fileID: 11400000, guid: ea64928fa21db504ebbcff5d58ad650c, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: abac7a89d84f20f469d9baccb13af2ef, type: 3}
 --- !u!1 &2130824018

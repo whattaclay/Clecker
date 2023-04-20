@@ -13,19 +13,19 @@ MonoBehaviour:
   m_Name: BusinessConfig  1
   m_EditorClassIdentifier: 
   _values:
-    LvlOfBusiness: 1
-    ProfitValue: 3
-    LvlUpPrice: 50
-    FirstUpgrdPrice: 150
-    FirstUpgrdName: Sale of Tulips in the bazaar
-    SecondUpgrdPrice: 300
-    SecondUpgrdName: Sale of Tulips in the store
-    ProgressPercentage: 0
-    ProfitTime: 3
-    BusinessName: Sale of Tulips in the underground passage
-    NextLevelMultiplier: 1.25
-    FirstUpgradeButActivity: 1
-    SecondUpgradeButActivity: 1
-    FirstUpgradePercentage: 25
-    SecondUpgradePercentage: 50
-    ClickerSkin: {fileID: 21300000, guid: 2538ea51a85e85c43b6cbb8e2830c1d3, type: 3}
+    lvlOfBusiness: 1
+    profitValue: 3
+    lvlUpPrice: 50
+    firstUpgrdPrice: 150
+    firstUpgrdName: Sale of Tulips in the bazaar
+    secondUpgrdPrice: 300
+    secondUpgrdName: Sale of Tulips in the store
+    progressPercentage: 60
+    profitTime: 3
+    businessName: Sale of Tulips in the underpass
+    nextLevelMultiplier: 1.25
+    firstUpgradeButActivity: 1
+    secondUpgradeButActivity: 1
+    firstUpgradePercentage: 25
+    secondUpgradePercentage: 50
+    clickerSkin: {fileID: 21300000, guid: 2538ea51a85e85c43b6cbb8e2830c1d3, type: 3}

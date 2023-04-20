@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8cc947ebfb94beda28207452c5355ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button: {fileID: 5020680862511881988}
+  buttonText: {fileID: 6152533782013147042}
   skinConfig: {fileID: 11400000, guid: 8c503cc4614534b4caefc246ee5a99e0, type: 2}
   balance: {fileID: 11400000, guid: eb47187009890954b9c557ee05c548c6, type: 2}
   skinNumberText: {fileID: 4909475342134627735}
@@ -235,10 +235,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27269abd75fb48c3ac3303e8eac98ef0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _skinNameText: {fileID: 2025440398513039423}
-  _skinImage: {fileID: 7493034977550649461}
-  _skinsConfig: {fileID: 11400000, guid: 8c503cc4614534b4caefc246ee5a99e0, type: 2}
-  _skinNumber: {fileID: 4909475342134627735}
+  skinNameText: {fileID: 2025440398513039423}
+  skinImage: {fileID: 7493034977550649461}
+  skinsConfig: {fileID: 11400000, guid: 8c503cc4614534b4caefc246ee5a99e0, type: 2}
+  skinNumber: {fileID: 4909475342134627735}
 --- !u!1 &4751448137030053809
 GameObject:
   m_ObjectHideFlags: 0
