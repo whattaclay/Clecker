@@ -24,8 +24,8 @@ MonoBehaviour:
     ProfitTime: 17
     BusinessName: Banking business(purchase/sale of shares)
     NextLevelMultiplier: 2
-    LvllUpButActivity: 1
     FirstUpgradeButActivity: 1
     SecondUpgradeButActivity: 1
     FirstUpgradePercentage: 75
     SecondUpgradePercentage: 125
+    ClickerSkin: {fileID: 21300000, guid: 2538ea51a85e85c43b6cbb8e2830c1d3, type: 3}

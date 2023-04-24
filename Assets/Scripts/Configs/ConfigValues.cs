@@ -1,24 +1,27 @@
 ﻿using System;
+using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Configs
 {
     [Serializable]
     public class ConfigValues
     {
-        public int LvlOfBusiness;
-        public float ProfitValue;
-        public float LvlUpPrice;
-        public int FirstUpgrdPrice;
-        public string FirstUpgrdName;
-        public int SecondUpgrdPrice;
-        public string SecondUpgrdName;
-        public float ProgressPercentage;
-        public float ProfitTime;
-        public string BusinessName;
-        public float NextLevelMultiplier;
-        public bool FirstUpgradeButActivity;
-        public bool SecondUpgradeButActivity;
-        public float FirstUpgradePercentage;
-        public float SecondUpgradePercentage;
+        public int lvlOfBusiness;
+        public float profitValue;
+        public float lvlUpPrice;
+        public int firstUpgrdPrice;
+        public string firstUpgrdName;
+        public int secondUpgrdPrice;
+        public string secondUpgrdName;
+        public float progressPercentage;
+        public float profitTime;
+        public string businessName;
+        public float nextLevelMultiplier;
+        public bool firstUpgradeButActivity;
+        public bool secondUpgradeButActivity;
+        public float firstUpgradePercentage;
+        public float secondUpgradePercentage;
+        public Sprite clickerSkin;
     }
 }

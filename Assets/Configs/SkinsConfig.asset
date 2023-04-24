@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7959eb526b445b697eae14ff0a88035, type: 3}
+  m_Name: SkinsConfig
+  m_EditorClassIdentifier: 
+  _skins:
+  - skinImage: {fileID: 21300000, guid: 2538ea51a85e85c43b6cbb8e2830c1d3, type: 3}
+    skinName: Default Skin
+    buyButtonText: Is used!
+    skinPrice: 0
+    useState: 1
+    buyState: 1
+  - skinImage: {fileID: 21300000, guid: cf08883dd4ec3374d86fee093b5b0a6e, type: 3}
+    skinName: Black Bitcoin
+    buyButtonText: 50$
+    skinPrice: 50
+    useState: 0
+    buyState: 0
+  - skinImage: {fileID: 21300000, guid: 4d098681fe1bd9245bcde709fcff13fd, type: 3}
+    skinName: CoinTorus
+    buyButtonText: 100$
+    skinPrice: 100
+    useState: 0
+    buyState: 0
+  - skinImage: {fileID: 21300000, guid: edaf2e853e686554fa7007358ee2d4cd, type: 3}
+    skinName: Cryptorocket Coin
+    buyButtonText: 120$
+    skinPrice: 120
+    useState: 0
+    buyState: 0
+  - skinImage: {fileID: 21300000, guid: 1efbda2736732784f93951b6c059d3c1, type: 3}
+    skinName: Dogge Coin
+    buyButtonText: 200$
+    skinPrice: 200
+    useState: 0
+    buyState: 0
+  - skinImage: {fileID: 21300000, guid: ce7e1d32b311b9349bdb43e2838cfec8, type: 3}
+    skinName: Drawing Bitcoin
+    buyButtonText: 50$
+    skinPrice: 50
+    useState: 0
+    buyState: 0
+  - skinImage: {fileID: 21300000, guid: 50b7dd283f10ddd46b1632e2360137d2, type: 3}
+    skinName: Lite Coin
+    buyButtonText: 180$
+    skinPrice: 180
+    useState: 0
+    buyState: 0
+  - skinImage: {fileID: 21300000, guid: 8ee176891cb83554e94350b7815a2246, type: 3}
+    skinName: Gold Bitcoin
+    buyButtonText: 300$
+    skinPrice: 300
+    useState: 0
+    buyState: 0
+  - skinImage: {fileID: 21300000, guid: d91adb0a23989474b88bf9c91b0d4217, type: 3}
+    skinName: Souvenir Bitcoin
+    buyButtonText: 500$
+    skinPrice: 500
+    useState: 0
+    buyState: 0

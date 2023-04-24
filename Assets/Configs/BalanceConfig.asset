@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: BalanceConfig
   m_EditorClassIdentifier: 
   _balance:
-    BalanceValue: 810.2969
+    BalanceValue: 780
