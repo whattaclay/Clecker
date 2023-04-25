@@ -13,19 +13,19 @@ MonoBehaviour:
   m_Name: BusinessConfig 4
   m_EditorClassIdentifier: 
   _values:
-    LvlOfBusiness: 0
-    ProfitValue: 1000
-    LvlUpPrice: 15000
-    FirstUpgrdPrice: 45000
-    FirstUpgrdName: "Banking business(\u0441ommission income)"
-    SecondUpgrdPrice: 90000
-    SecondUpgrdName: Banking business(issuance of loans)
-    ProgressPercentage: 0
-    ProfitTime: 17
-    BusinessName: Banking business(purchase/sale of shares)
-    NextLevelMultiplier: 2
-    FirstUpgradeButActivity: 1
-    SecondUpgradeButActivity: 1
-    FirstUpgradePercentage: 75
-    SecondUpgradePercentage: 125
-    ClickerSkin: {fileID: 21300000, guid: 2538ea51a85e85c43b6cbb8e2830c1d3, type: 3}
+    lvlOfBusiness: 0
+    profitValue: 1000
+    lvlUpPrice: 15000
+    firstUpgrdPrice: 45000
+    firstUpgrdName: "banking business(\u0441ommission income)"
+    secondUpgrdPrice: 120000
+    secondUpgrdName: banking business(Issuance of loans)
+    progressPercentage: 0
+    profitTime: 17
+    businessName: banking business(purchase/sale of shares)
+    nextLevelMultiplier: 100
+    firstUpgradeButActivity: 1
+    secondUpgradeButActivity: 1
+    firstUpgradePercentage: 25
+    secondUpgradePercentage: 50
+    clickerSkin: {fileID: 21300000, guid: 2538ea51a85e85c43b6cbb8e2830c1d3, type: 3}
