@@ -23,7 +23,7 @@ MonoBehaviour:
     progressPercentage: 0
     profitTime: 6
     businessName: Sale of Building Materials in the bazaar
-    nextLevelMultiplier: 50
+    nextLevelMultiplier: 1.5
     firstUpgradeButActivity: 1
     secondUpgradeButActivity: 1
     firstUpgradePercentage: 25

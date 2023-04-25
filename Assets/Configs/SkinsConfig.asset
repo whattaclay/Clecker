@@ -21,7 +21,7 @@ MonoBehaviour:
     buyState: 1
   - skinImage: {fileID: 21300000, guid: cf08883dd4ec3374d86fee093b5b0a6e, type: 3}
     skinName: Black Bitcoin
-    buyButtonText: 50$
+    buyButtonText: Use!
     skinPrice: 50
     useState: 0
     buyState: 0
