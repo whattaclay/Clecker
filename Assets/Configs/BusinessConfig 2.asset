@@ -13,19 +13,19 @@ MonoBehaviour:
   m_Name: BusinessConfig 2
   m_EditorClassIdentifier: 
   _values:
-    LvlOfBusiness: 0
-    ProfitValue: 40
-    LvlUpPrice: 1200
-    FirstUpgrdPrice: 3000
-    FirstUpgrdName: Sale of Building Materials on your land plot
-    SecondUpgrdPrice: 5000
-    SecondUpgrdName: Sale of Building Materials in a warehouse.
-    ProgressPercentage: 10
-    ProfitTime: 6
-    BusinessName: Sale of Building Materials in the bazaar
-    NextLevelMultiplier: 1.5
-    FirstUpgradeButActivity: 1
-    SecondUpgradeButActivity: 1
-    FirstUpgradePercentage: 50
-    SecondUpgradePercentage: 75
-    ClickerSkin: {fileID: 21300000, guid: 2538ea51a85e85c43b6cbb8e2830c1d3, type: 3}
+    lvlOfBusiness: 0
+    profitValue: 40
+    lvlUpPrice: 1200
+    firstUpgrdPrice: 3600
+    firstUpgrdName: Sale of building materials on your land plot
+    secondUpgrdPrice: 10800
+    secondUpgrdName: Sale of building materials in a warehouse
+    progressPercentage: 0
+    profitTime: 6
+    businessName: Sale of Building Materials in the bazaar
+    nextLevelMultiplier: 50
+    firstUpgradeButActivity: 1
+    secondUpgradeButActivity: 1
+    firstUpgradePercentage: 25
+    secondUpgradePercentage: 50
+    clickerSkin: {fileID: 21300000, guid: 2538ea51a85e85c43b6cbb8e2830c1d3, type: 3}

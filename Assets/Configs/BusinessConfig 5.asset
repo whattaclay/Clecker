@@ -13,19 +13,19 @@ MonoBehaviour:
   m_Name: BusinessConfig 5
   m_EditorClassIdentifier: 
   _values:
-    LvlOfBusiness: 0
-    ProfitValue: 5000
-    LvlUpPrice: 100000
-    FirstUpgrdPrice: 300000
-    FirstUpgrdName: Cryptocurrency(creating a currency)
-    SecondUpgrdPrice: 600000
-    SecondUpgrdName: Cryptocurrency(digital currency exchange)
-    ProgressPercentage: 0
-    ProfitTime: 30
-    BusinessName: Cryptocurrency(trading)
-    NextLevelMultiplier: 2
-    FirstUpgradeButActivity: 1
-    SecondUpgradeButActivity: 1
-    FirstUpgradePercentage: 75
-    SecondUpgradePercentage: 125
-    ClickerSkin: {fileID: 21300000, guid: 2538ea51a85e85c43b6cbb8e2830c1d3, type: 3}
+    lvlOfBusiness: 0
+    profitValue: 5000
+    lvlUpPrice: 100000
+    firstUpgrdPrice: 300000
+    firstUpgrdName: Cryptocurrency(Creating a currency)
+    secondUpgrdPrice: 900000
+    secondUpgrdName: Cryptocurrency(Digital currency exchange)
+    progressPercentage: 0
+    profitTime: 30
+    businessName: Cryptocurrency(Trading)
+    nextLevelMultiplier: 100
+    firstUpgradeButActivity: 1
+    secondUpgradeButActivity: 1
+    firstUpgradePercentage: 25
+    secondUpgradePercentage: 50
+    clickerSkin: {fileID: 21300000, guid: 2538ea51a85e85c43b6cbb8e2830c1d3, type: 3}

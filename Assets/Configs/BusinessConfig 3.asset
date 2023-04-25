@@ -13,19 +13,19 @@ MonoBehaviour:
   m_Name: BusinessConfig 3
   m_EditorClassIdentifier: 
   _values:
-    LvlOfBusiness: 0
-    ProfitValue: 200
-    LvlUpPrice: 12000
-    FirstUpgrdPrice: 18000
-    FirstUpgrdName: "\u0421arsharing owner"
-    SecondUpgrdPrice: 36000
-    SecondUpgrdName: Car dealership owner
-    ProgressPercentage: 0
-    ProfitTime: 10
-    BusinessName: Owner of an auto repair shop
-    NextLevelMultiplier: 2
-    FirstUpgradeButActivity: 1
-    SecondUpgradeButActivity: 1
-    FirstUpgradePercentage: 75
-    SecondUpgradePercentage: 125
-    ClickerSkin: {fileID: 21300000, guid: 2538ea51a85e85c43b6cbb8e2830c1d3, type: 3}
+    lvlOfBusiness: 0
+    profitValue: 200
+    lvlUpPrice: 6000
+    firstUpgrdPrice: 18000
+    firstUpgrdName: "\u0421arsharing owner"
+    secondUpgrdPrice: 54000
+    secondUpgrdName: Car dealership owner
+    progressPercentage: 0
+    profitTime: 10
+    businessName: Owner of an auto repair shop
+    nextLevelMultiplier: 100
+    firstUpgradeButActivity: 1
+    secondUpgradeButActivity: 1
+    firstUpgradePercentage: 25
+    secondUpgradePercentage: 50
+    clickerSkin: {fileID: 21300000, guid: 2538ea51a85e85c43b6cbb8e2830c1d3, type: 3}
